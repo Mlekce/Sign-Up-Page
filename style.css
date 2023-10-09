@@ -1,0 +1,205 @@
+@font-face {
+    font-family: Norse;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-light;
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-size: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow: auto;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 0.5fr;
+}
+
+aside {
+    background-image: url(img/lisce.webp);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+/* LEFT SIDE */
+
+.logo {
+    padding: 5px 0;
+    max-height: 16vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h2 {
+    display: inline-block;
+    font-size: 6rem;
+    color: #FFF;
+    font-family: Norse, serif;
+}
+
+aside img {
+    height: 15vh;
+}
+
+aside div:last-child {
+    color: #FFF;
+    text-align: center;
+    align-self: self-end;
+    padding-bottom: 10px;
+    font-family: Roboto-light;
+}
+
+aside div:last-child a {
+    color: #FFF;
+}
+
+/* MAIN SECTION */
+
+.description {
+    padding: 0 1.5rem;
+    align-self: self-end;
+    min-height: 200px;
+}
+
+.description p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* MAIN FORMS */
+
+.forms {
+    background-color: #FFF;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+legend {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.4rem;
+    border: none;
+    padding: 0;
+    padding-left: 1rem;
+}
+
+input {
+    border-color: rgba(238, 238, 238, 0.5);
+    border-color: #E5E7EB;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    font-size: 1.2rem;
+    background-color:rgba(238, 238, 238, 0.2) ;   
+    outline: none;
+}
+
+input:focus {
+    border: 3px solid rgb(0, 153, 255);
+}   
+
+/* MAIN BOTTOM */
+
+.bottom {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.bottom button {
+    background-color: #596D48;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+button:hover, button:active {
+    color: rgb(241, 66, 66);
+    background-color: #627a4d;
+}
+
+.bottom > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.bottom > p a {
+    color: #596D48;
+}
+
+@media screen and (max-width:940px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        grid-template-rows: min-content;
+    }
+
+    .description {
+        align-self: self-start;
+    }
+
+    aside div:last-child {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 9px;
+    }
+
+    .forms fieldset {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    input {
+        min-width: 100%;
+    }
+
+    fieldset {
+        padding-right: 1rem;
+    }
+
+}
